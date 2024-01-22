@@ -6,23 +6,17 @@ Descripció:
 Programa que generi una llista de 100 nombres aleatoris entre 1 i 50. Obtenir la mitja dels nombres que es troben a les posicions parelles i la mitja del nombre de les posicions senars.
 """
 llista = []
-parells = []
-senars = []
 mitjanaParells = 0
 mitjanaSenars = 0
-totalP = 0
-totalS = 0
 import random
 for i in range(100):
     num = random.randint(1,50)
     llista.append(num)
-    if num % 2 == 0:
+    if i % 2 == 0:
         mitjanaParells += num
-        totalP += 1
-    elif num % 2 != 0:
+    else:
         mitjanaSenars += num
-        totalS += 1
 
 print(llista)
-print("Mitjana dels parells:",mitjanaParells/totalP)
-print("Mitjana dels senars:",mitjanaSenars/totalS)
+print("Mitjana dels parells:",mitjanaParells/50)
+print("Mitjana dels senars:",mitjanaSenars/50)

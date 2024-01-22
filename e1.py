@@ -14,6 +14,8 @@ max2022 = 0
 maxTotal = 0
 min2022 = 99
 minTotal = 99
+juanito = 0
+ANYS = 23
 data = {
     2022: [13.6, 13.4, 13.2, 13.4, 13.9, 13.7, 13.7, 13.8, 14, 14.3, 16, 15.1, 14],
     2021: [13.3, 12.9, 13.5, 13.5, 13.7, 13.8, 13.8, 13.8, 14.2, 14.6, 16.8, 14.7, 14.1],
@@ -50,12 +52,15 @@ for valor in valors2022:
     if valor < min2022:
         min2022 = valor
 
-for num in data.values():
+for num in data:
+    anyito = list(data.keys())[juanito]
+    valors2023 = data[any2022]
     mitjanaTotal = mitjanaTotal + num
     if num > maxTotal:
         max2000 = num
     if num < minTotal:
         min2000 = num
+    juanito += 1
 
 print("Any 2022")
 print("Max:",max2022)
@@ -65,4 +70,4 @@ print("Mitjana:",mitjana2022/MESOS)
 print("Any 2000-2022")
 print("Max:",maxTotal)
 print("Min:",minTotal)
-print("Mitjana:",mitjanaTotal/MESOS)
+print("Mitjana:",(mitjanaTotal/ANYS)/MESOS)
