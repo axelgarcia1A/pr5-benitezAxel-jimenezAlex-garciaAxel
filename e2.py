@@ -17,16 +17,12 @@ for i in range(100):
     num = random.randint(1,50)
     llista.append(num)
     if num % 2 == 0:
-        parells.append(num)
+        mitjanaParells += num
         totalP += 1
     elif num % 2 != 0:
-        senars.append(num)
+        mitjanaSenars += num
         totalS += 1
-for x in parells:
-    mitjanaParells = mitjanaParells + x
 
-for x in senars:
-    mitjanaSenars = mitjanaSenars + x
-
+print(llista)
 print("Mitjana dels parells:",mitjanaParells/totalP)
 print("Mitjana dels senars:",mitjanaSenars/totalS)

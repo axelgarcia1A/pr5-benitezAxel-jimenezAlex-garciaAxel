@@ -7,7 +7,13 @@ Fer un programa de càlcul de temperatures del mar. Les tasques a fer són:
 Calcular per a l’any 2022: temperatura màxima, mínima i mitjana
 Calcular per període 2000 a 2022: temperatura màxima, mínima i mitjana
 """
-
+mitjana2022 = 0
+mitjanaTotal = 0
+MESOS = 12
+max2022 = 0
+maxTotal = 0
+min2022 = 99
+minTotal = 99
 data = {
     2022: [13.6, 13.4, 13.2, 13.4, 13.9, 13.7, 13.7, 13.8, 14, 14.3, 16, 15.1, 14],
     2021: [13.3, 12.9, 13.5, 13.5, 13.7, 13.8, 13.8, 13.8, 14.2, 14.6, 16.8, 14.7, 14.1],
@@ -33,8 +39,30 @@ data = {
     2001: [13.8, 13, 12.6, 13.6, 13.5, 13.4, 14, 14, 14.2, 15.3, 16.8, 14, 14],
     2000: [12.7, 12.4, 12.6, 12.4, 13, 13.6, 13.3, 13.6, 13.5, 15.9, 15.3, 14.9, 13.6]
 }
-first_year = list(data.keys())[0]
-values_of_first_year = data[first_year]
+any2022 = list(data.keys())[0]
+valors2022 = data[any2022]
 
-for value in values_of_first_year:
-    print(value, end=" ")
+
+for valor in valors2022:
+    mitjana2022 = mitjana2022 + valor
+    if valor > max2022:
+        max2022 = valor
+    if valor < min2022:
+        min2022 = valor
+
+for num in data.values():
+    mitjanaTotal = mitjanaTotal + num
+    if num > maxTotal:
+        max2000 = num
+    if num < minTotal:
+        min2000 = num
+
+print("Any 2022")
+print("Max:",max2022)
+print("Min:",min2022)
+print("Mitjana:",mitjana2022/MESOS)
+
+print("Any 2000-2022")
+print("Max:",maxTotal)
+print("Min:",minTotal)
+print("Mitjana:",mitjanaTotal/MESOS)
